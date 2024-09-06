@@ -1,1 +1,2 @@
 # csci-2010u-fall2024
+Here you will find all of the code examples we work together on in class. Note that not all of the examples will be familiar to you as there are multiple sections, but feel free to explore all of the provided code. I will post .java files into folders for each week of the course.
