@@ -1,2 +1,2 @@
 # csci-2010u-fall2024
-Here you will find all of the code examples we work together on in class. Note that not all of the examples will be familiar to you as there are multiple sections, but feel free to explore all of the provided code. I will post .java files or complete IntelliJ projects into folders for each week of the course.
+Here you will find all of the code examples we work together on in class. Note that not all of the examples will be familiar to you as there are multiple sections, but feel free to explore all of the provided code. I will post .java files or complete IntelliJ projects into folders for each week of the course. In the case of the foldered projects, you can find the .java file in the src folder.
