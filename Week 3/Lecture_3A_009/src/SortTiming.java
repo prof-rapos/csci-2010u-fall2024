@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class SortTiming {
   public static void main(String[] args) {
-    int[] array = generateRandomArray(50000);
+    int[] array = generateRandomArray(1000000);
 
     // Warm-up JVM
     warmUpJVM();

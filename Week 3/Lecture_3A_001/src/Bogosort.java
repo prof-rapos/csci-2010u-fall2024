@@ -34,7 +34,7 @@ public class Bogosort {
   public static void main(String[] args) {
 
 
-    int size = 12;
+    int size = 14;
     int[] arr = new int[size];
     Random rand = new Random();
 
