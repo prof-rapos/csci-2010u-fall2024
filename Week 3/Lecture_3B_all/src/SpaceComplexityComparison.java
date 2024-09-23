@@ -1,7 +1,7 @@
 public class SpaceComplexityComparison {
 
   public static void main(String[] args) {
-    int n = 200000000; // Array size
+    int n = 10000; // Array size
 
     // Create a single array for both methods to work on
     int[] array = new int[n];
