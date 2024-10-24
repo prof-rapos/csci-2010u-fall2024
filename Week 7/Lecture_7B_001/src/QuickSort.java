@@ -25,7 +25,7 @@ public class QuickSort {
 
     // Move j to the left until we find an element less than or equal to the pivot
 
-    // If i is still less than j, we need to swap the out-of-place elements
+    // If i is still less than or equal to j, we need to swap the out-of-place elements and advance the pointers
 
 
 
