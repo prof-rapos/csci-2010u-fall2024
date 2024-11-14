@@ -57,7 +57,9 @@ class AVLTree {
   // Insert a node
   Node insert(Node node, int key) {
     // Perform standard BST insertion
-    if (node == null) return new Node(key);
+    if (node == null) {
+      return new Node(key);
+    }
 
     if (key < node.key) {
       node.left = insert(node.left, key);
@@ -74,10 +76,14 @@ class AVLTree {
     int balance = getBalance(node);
 
     // Left Left Case
-    if (balance > 1 && key < node.left.key) return rightRotate(node);
+    if (balance > 1 && key < node.left.key) {
+      return rightRotate(node);
+    }
 
     // Right Right Case
-    if (balance < -1 && key > node.right.key) return leftRotate(node);
+    if (balance < -1 && key > node.right.key) {
+      return leftRotate(node);
+    }
 
     // Left Right Case
     if (balance > 1 && key > node.left.key) {
@@ -115,7 +121,9 @@ class AVLTree {
 
   // Extension: Delete a node
   Node delete(Node root, int key) {
-    if (root == null) return root;
+    if (root == null) {
+      return root;
+    }
 
     if (key < root.key) {
       root.left = delete(root.left, key);
@@ -136,18 +144,24 @@ class AVLTree {
       }
     }
 
-    if (root == null) return root;
+    if (root == null) {
+      return root;
+    }
 
     root.height = Math.max(height(root.left), height(root.right)) + 1;
     int balance = getBalance(root);
 
     // Balance the tree if needed
-    if (balance > 1 && getBalance(root.left) >= 0) return rightRotate(root);
+    if (balance > 1 && getBalance(root.left) >= 0) {
+      return rightRotate(root);
+    }
     if (balance > 1 && getBalance(root.left) < 0) {
       root.left = leftRotate(root.left);
       return rightRotate(root);
     }
-    if (balance < -1 && getBalance(root.right) <= 0) return leftRotate(root);
+    if (balance < -1 && getBalance(root.right) <= 0) {
+      return leftRotate(root);
+    }
     if (balance < -1 && getBalance(root.right) > 0) {
       root.right = rightRotate(root.right);
       return leftRotate(root);
