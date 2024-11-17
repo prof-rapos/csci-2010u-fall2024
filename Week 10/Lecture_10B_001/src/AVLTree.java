@@ -181,4 +181,27 @@ class AVLTree {
   public void delete(int key) {
     root = delete(root, key);
   }
+
+  public void printTree(Node node, int depth) {
+    if (node == null) {
+      return;
+    }
+    System.out.print("|");
+    for (int i = 0; i < depth; i++) {
+      System.out.print("--");
+    }
+    System.out.println(node.key + " (" + getBalance(node) + ")");
+    printTree(node.left, depth + 1);
+    printTree(node.right, depth + 1);
+  }
+
+  public static void main(String[] args) {
+    AVLTree tree = new AVLTree();
+    for (int i = 0; i < 25; i++) {
+      int x = (int) ((Math.random() * 100) + 1);
+      tree.insert(x);
+      System.out.println("After inserting " + x + ":");
+      tree.printTree(tree.root ,0);
+    }
+  }
 }
